@@ -9,7 +9,13 @@ def start_room(roomchoice):
     print("What would you like to do?")
     choice = input("Search the room, Leave the room or Give up \n")
     if choice == "Search the room":
-        search_room(roomchoice)
+        keyFound = search_room(roomchoice)
+        if keyFound == True:
+            print("You have found the key and are able to get to work on time!")
+            exit()
+        else:
+            print("You have lost your key and are going to be very late for work. You will also be put on the bosses email list.")
+            exit()
     elif choice == "Leave the room":
         print("You have left the room and are now back in the hallway")
         choose_room()
