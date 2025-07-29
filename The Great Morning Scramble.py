@@ -1,14 +1,35 @@
 def choose_room():
     print("You are currently in the hallway. What room would you like to go to?")
-    print("Kitchen,\n Livingroom, \n Bathroom, \n Bedroom, \n Garage")
-    roomChoice = input()
-    return roomChoice
-
+    print("Kitchen,\nLivingroom,\nBathroom,\nBedroom,\nGarage")
+    roomChoice = input("")
+    return roomChoice  
 
 def start_room(roomchoice):
     print("You have choose to search the", roomchoice)
     print("What would you like to do?")
     choice = input("Search the room, Leave the room or Give up \n")
+    if choice == "Search the room":
+        search_room(roomchoice)
+    elif choice == "Leave the room":
+        print("You have left the room and are now back in the hallway")
+        choose_room()
+    elif choice == "Give up":
+        print("You gave up, your gonna get a fair email from your boss!")
+        exit()
+
+def search_room(roomchoice):
+    if roomchoice == "Kitchen":
+         keyFound = False
+    elif roomchoice == "Livingroom":
+         keyFound = False
+    elif roomchoice == "Bathroom":
+         keyFound = False
+    elif roomchoice == "Bedroom":
+         keyFound = False
+    else:
+         keyFound = True
+
+    return keyFound
 
     
 def find_key():
