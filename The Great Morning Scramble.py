@@ -1,6 +1,6 @@
 def choose_room():
     print("You are currently in the hallway. What room would you like to go to?")
-    print("Kitchen,\nLivingroom,\nBathroom,\nBedroom,\nGarage")
+    print("Kitchen\nLivingroom\nBathroom\nBedroom\nGarage")
     roomChoice = input("")
     return roomChoice  
 
@@ -38,7 +38,7 @@ def find_key():
 
 
 def main():
-    roomchoice = choose_room
+    roomchoice = choose_room()
     start_room(roomchoice)
 
 
