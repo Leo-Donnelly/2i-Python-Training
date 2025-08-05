@@ -4,12 +4,12 @@ def choose_room():
     roomChoice = input("")
     return roomChoice  
 
-def start_room(roomchoice):
-    print("You have choose to search the", roomchoice)
+def start_room(roomChoice):
+    print("You have choose to search the", roomChoice)
     print("What would you like to do?")
     choice = input("Search the room, Leave the room or Give up \n")
     if choice == "Search the room":
-        keyFound = search_room(roomchoice)
+        keyFound = search_room(roomChoice)
         if keyFound == True:
             print("You have found the key and are able to get to work on time!")
             exit()
@@ -23,14 +23,14 @@ def start_room(roomchoice):
         print("You gave up, your gonna get a fair email from your boss!")
         exit()
 
-def search_room(roomchoice):
-    if roomchoice == "Kitchen":
+def Search_Room(roomChoice):
+    if roomChoice == "Kitchen":
          keyFound = False
-    elif roomchoice == "Livingroom":
+    elif roomChoice == "Livingroom":
          keyFound = False
-    elif roomchoice == "Bathroom":
+    elif roomChoice == "Bathroom":
          keyFound = False
-    elif roomchoice == "Bedroom":
+    elif roomChoice == "Bedroom":
          keyFound = False
     else:
          keyFound = True
@@ -38,14 +38,14 @@ def search_room(roomchoice):
     return keyFound
 
     
-def find_key():
+def Find_Key():
     print("Well done you have found the key to leave the house, \n you will no longer be put on the bosses list.")
 
 
 
 def main():
-    roomchoice = choose_room()
-    start_room(roomchoice)
+    roomChoice = choose_room()
+    start_room(roomChoice)
 
 
 
