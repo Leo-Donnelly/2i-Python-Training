@@ -8,31 +8,26 @@ def start_room(roomChoice):
     print("You have choose to search the", roomChoice)
     print("What would you like to do?")
     choice = input("Search the room, Leave the room or Give up \n")
-    if choice == "Search the room":
-        keyFound = search_room(roomChoice)
-        if keyFound == True:
+
+    if choice == "Search the room" or choice == "search the room":
+        keyFound = Search_Room(roomChoice)
+        if keyFound == 1:
             print("You have found the key and are able to get to work on time!")
             exit()
         else:
             print("You have lost your key and are going to be very late for work. You will also be put on the bosses email list.")
             exit()
-    elif choice == "Leave the room":
+    elif choice == "Leave the room" or choice == "leave the room":
         print("You have left the room and are now back in the hallway")
         choose_room()
-    elif choice == "Give up":
+    elif choice == "Give up" or choice == "give up":
         print("You gave up, your gonna get a fair email from your boss!")
         exit()
 
 def Search_Room(roomChoice):
-    if roomChoice == "Kitchen":
-         keyFound = False
-    elif roomChoice == "Livingroom":
-         keyFound = False
-    elif roomChoice == "Bathroom":
-         keyFound = False
-    elif roomChoice == "Bedroom":
-         keyFound = False
-    else:
+    keyFound = False
+    
+    if roomChoice == "Garage" or roomChoice == "garage":
          keyFound = True
 
     return keyFound
