@@ -1,5 +1,5 @@
 def open_file():
-    logFile = open("Log_file.txt", "r")
+    logFile = open("Beginner\Log_file.txt", "r")
     return logFile
     
 def read_logs(logFile):
