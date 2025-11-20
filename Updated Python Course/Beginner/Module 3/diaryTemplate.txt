@@ -1,0 +1,5 @@
+Dear Diary,
+
+Today {{name}} felt very {{mood}}.
+
+It was quite a day!
